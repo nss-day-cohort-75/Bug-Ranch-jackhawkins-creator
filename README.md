@@ -76,11 +76,11 @@ Your journey will take you through the wildness of the American Midwest and acro
 ```
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+   > 'drovers' should be a list of 5 drover objects. These drovers are called through the hireDrovers function, which does two things: (1) It determines how many drovers we need based on the number of cattle. (2) It uses a loop and math to get 5 random numbers ranging from 1 to 50. It then puts the 5 drovers linked to those id numbers into the 'drovers' array.
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+   > 'drovers' is just the same array of 5 objects described in question 1. 'drover' is the constant value we are using for our 'for' loop. In this loop, we are console logging out an indented message containing both the first and last names of the people in our 'drovers' list.
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > [Your public Loom URL here](https://www.loom.com/share/acf4e9975c004473869a22ffc9cc0559)
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,11 +88,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > This 'for' loop pushes our 'forest' strings into our 'journey' array. In other words, we go through the 'for' loop at most two times. We have already stated above in the 'areas' object that we have at most two forests, so when we index 'areas.forests' we are getting its number value.
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > In simple terms, 'database' is where we're pulling our data. It is an object that contains two arrays - 'cattleTypes' and 'drovers'. The 'cattleTypes' array holds a total of four objects, each with two key-value pairs. The first key-value pair describes the identification number of the cattle breed; the second describes the breed itself (e.g., Brown Swiss). Moving on to the second array (drovers), we have a total of 50 objects, each with four key-value pairs (id, first_name, last_name, and gender).
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > '(herdSize)' is the parameter. We get the herdSize value in the main.js module, and it is set to the variable 'cattleToDrive'. In our case, that value is the number 50, so in the 'hireDrovers()' function, we call the value of 50 and divide it by 10, since that is how we determine the number of necessary drovers. However, there is an error in the '(herdSize)' function; the current code is trying to call 'cattleToDrive' instead of our parameter. Replacing 'cattleToDrive' with 'herdSize' fixes the issue.
 
 ## When You Are Done
 
